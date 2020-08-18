@@ -2,7 +2,7 @@ Important:
 
 In order to get the program to work:
 
-1. Download and unzip the entire repository.
+1. Download and unzip the entire repository. (Click on the green "Code" button and then choose "Download Zip.")
 
 2. Cut and paste the tzdata folder from the repository folder into your C:\Users\[username]\Downloads folder (where [username] is your actual username. The tzdata folder contains time zone information that the program will need in order to run.
 
