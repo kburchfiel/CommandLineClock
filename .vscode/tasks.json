@@ -9,7 +9,10 @@
 				"-g",
 "${workspaceFolder}\\*.cpp",
 "-lole32",
+"-static-libgcc",
+"-static-libstdc++",
 "-o",
+
 "${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
 			"options": {
