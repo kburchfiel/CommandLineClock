@@ -1,8 +1,11 @@
 //AMDG
 //This program is based on Howard Hinnant's excellent date library, a similar form of which will become part of C++20. https://github.com/HowardHinnant/date
+//The code is based on examples provided by Howard at https://howardhinnant.github.io/date/tz.html . 
 //This program also utilizes time zone information from the IANA. https://www.iana.org/time-zones
 //In addition, the program uses Unicode's windowsZones.xml file (Copyright © 1991-2013 Unicode, Inc.). https://github.com/unicode-org/cldr/blob/master/common/supplemental/windowsZones.xml
-//Kenneth Burchfiel
+//One significant limitation of the program is that it must be reloaded to update the times. This limitation may be addressed in a future update.
+//Kenneth Burchfiel, 2020-8-18 (US EDT)
+
 
 
 #include "date/tz.h"
@@ -14,11 +17,11 @@ using namespace date;
 int main()
 {
 
-std::cout << "Note: time zones are accurate as of 4/2020 but may have changed since the publication of this program.\n";
-std::cout << "These times will not update; simply reload the program to update the times. By Kenneth Burchfiel (MIT License), 8/2020\n";
+std::cout << "These times (shown in a 24-hour format) will not update unless the program is reloaded. Time zones were accurate as of 4/2020 but may have changed since then. "; 
+std::cout << "Program By Kenneth Burchfiel (MIT License), 8/2020; see Github for sources.\n";
 
-auto local = make_zoned(current_zone(), floor<seconds>(system_clock::now())); //This line comes from https://howardhinnant.github.io/date/tz.html#somewhere_else (by Howard E. Hinnant)
-    std::cout << "Local time:\t" << local << '\n'; //this code comes essentially from https://howardhinnant.github.io/date/tz.html#somewhere_else as well
+auto local = make_zoned(current_zone(), floor<seconds>(system_clock::now())); //This line comes from https://howardhinnant.github.io/date/tz.html (by Howard E. Hinnant)
+    std::cout << "Local time:\t" << local << '\n'; //this code comes essentially from https://howardhinnant.github.io/date/tz.html as well
 
 
    auto HNL = make_zoned("Pacific/Honolulu", floor<seconds>(system_clock::now()));
@@ -60,11 +63,12 @@ auto LHR = make_zoned("Europe/London", floor<seconds>(system_clock::now()));
 auto BER = make_zoned("Europe/Berlin", floor<seconds>(system_clock::now())); 
     std::cout << "Berlin:\t\t" << BER << '\n';
 
+auto JNB = make_zoned("Africa/Johannesburg", floor<seconds>(system_clock::now())); 
+    std::cout << "Johannesburg:\t" << JNB << '\n';
+
 auto ATH = make_zoned("Europe/Athens", floor<seconds>(system_clock::now())); 
     std::cout << "Athens:\t\t" << ATH << '\n';
 
-auto JNB = make_zoned("Africa/Johannesburg", floor<seconds>(system_clock::now())); 
-    std::cout << "Johannesburg:\t" << JNB << '\n';
 
 auto IST = make_zoned("Europe/Istanbul", floor<seconds>(system_clock::now())); 
     std::cout << "Istanbul:\t" << IST << '\n';
@@ -97,7 +101,7 @@ auto AKL = make_zoned("Pacific/Auckland", floor<seconds>(system_clock::now()));
     std::cout << "Auckland:\t" << AKL << '\n'; 
 
 auto CXI = make_zoned("Pacific/Kiritimati", floor<seconds>(system_clock::now())); 
-    std::cout << "Kiritimati:\t" << CXI << '\n'; 
+    std::cout << "Tabwakea:\t" << CXI << '\n'; //The largest village on Kiritimati, according to Wikipedia
 
 
 char c; //keeps console window open
