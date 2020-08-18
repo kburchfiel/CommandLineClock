@@ -18,6 +18,8 @@ ConsoleWorldClock is a minimalist program that shows the current time in 25 diff
 ![Screenshot](https://github.com/kburchfiel/ConsoleWorldClock/blob/master/Screenshot.jpg)
 
 The console window can be narrowed in order to display within an even smaller frame:
+
+
 ![Screenshot](https://github.com/kburchfiel/ConsoleWorldClock/blob/master/Screenshotsmaller.jpg)
 
 To view a list of sources, visit the program's main .cpp file, available at https://github.com/kburchfiel/ConsoleWorldClock/blob/master/CLClockv2.cpp . 
