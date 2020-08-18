@@ -1,11 +1,12 @@
 //AMDG
-//This program is based on Howard Hinnant's excellent date library, a similar form of which will become part of C++20. https://github.com/HowardHinnant/date
+//This program is based on Howard Hinnant's excellent date/time zone library, a similar form of which will become part of C++20. https://github.com/HowardHinnant/date
 //The code is based on examples provided by Howard at https://howardhinnant.github.io/date/tz.html . 
 //This program also utilizes time zone information from the IANA. https://www.iana.org/time-zones
 //In addition, the program uses Unicode's windowsZones.xml file (Copyright © 1991-2013 Unicode, Inc.). https://github.com/unicode-org/cldr/blob/master/common/supplemental/windowsZones.xml
 //One significant limitation of the program is that it must be reloaded to update the times. This limitation may be addressed in a future update.
-//Kenneth Burchfiel, 2020-8-18 (US EDT)
-
+//Special thanks to Richard Davis and Eric Bomgardner for testing out the program on their end
+//Kenneth Burchfiel
+//First released on 2020-8-18 (US EDT)
 
 
 #include "date/tz.h"
@@ -60,6 +61,9 @@ auto ACC = make_zoned("Africa/Accra", floor<seconds>(system_clock::now()));
 auto LHR = make_zoned("Europe/London", floor<seconds>(system_clock::now())); 
     std::cout << "London:\t\t" << LHR << '\n';
 
+    auto LOS = make_zoned("Africa/Lagos", floor<seconds>(system_clock::now()));
+    std::cout << "Lagos:\t\t" << LOS<< '\n';
+
 auto BER = make_zoned("Europe/Berlin", floor<seconds>(system_clock::now())); 
     std::cout << "Berlin:\t\t" << BER << '\n';
 
@@ -100,9 +104,10 @@ auto SYD = make_zoned("Australia/Sydney", floor<seconds>(system_clock::now()));
 auto AKL = make_zoned("Pacific/Auckland", floor<seconds>(system_clock::now())); 
     std::cout << "Auckland:\t" << AKL << '\n'; 
 
+    /* Edited out so that the program will fit on a Windows console without any scrolling
 auto CXI = make_zoned("Pacific/Kiritimati", floor<seconds>(system_clock::now())); 
     std::cout << "Tabwakea:\t" << CXI << '\n'; //The largest village on Kiritimati, according to Wikipedia
-
+    */
 
 char c; //keeps console window open
     std::cin >> c;
