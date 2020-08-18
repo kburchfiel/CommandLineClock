@@ -22,6 +22,6 @@ The console window can be narrowed in order to display times within an even smal
 
 ![Screenshot](https://github.com/kburchfiel/ConsoleWorldClock/blob/master/Screenshotsmaller.jpg)
 
-To view a list of sources, visit the program's main .cpp file, available at https://github.com/kburchfiel/ConsoleWorldClock/blob/master/CLClockv2.cpp . 
+To view a list of sources/credits, visit the program's main .cpp file, available at https://github.com/kburchfiel/ConsoleWorldClock/blob/master/CLClockv2.cpp . 
 
 --Kenneth Burchfiel
