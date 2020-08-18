@@ -13,11 +13,11 @@ In order to get the program to work:
 
 ## About:
 
-ConsoleWorldClock is a minimalist program that shows the current time in 25 different cities around the world. It is meant to display lots of information within a relatively small footprint. 
+ConsoleWorldClock is a minimalist program that shows the current time in 26 different cities around the world. It is meant to display lots of information within a relatively small footprint. 
 
 ![Screenshot](https://github.com/kburchfiel/ConsoleWorldClock/blob/master/Screenshot.jpg)
 
-The console window can be narrowed in order to display within an even smaller frame:
+The console window can be narrowed in order to display times within an even smaller frame:
 
 
 ![Screenshot](https://github.com/kburchfiel/ConsoleWorldClock/blob/master/Screenshotsmaller.jpg)
