@@ -8,11 +8,9 @@
 //Kenneth Burchfiel
 //First released on 2020-8-18 (US EDT)
 
-
 #include "date/tz.h"
 #include <iostream>
 #include <thread>
-
 
 using namespace date;
     using namespace std::chrono;
@@ -24,7 +22,6 @@ using namespace date;
 
         auto local = make_zoned(current_zone(), floor<seconds>(system_clock::now())); //This line comes from https://howardhinnant.github.io/date/tz.html (by Howard E. Hinnant)
         std::cout << "Local time:\t" << local << '\n'; //this code comes essentially from https://howardhinnant.github.io/date/tz.html as well
-
 
         auto HNL = make_zoned("Pacific/Honolulu", floor<seconds>(system_clock::now()));
         std::cout << "Honolulu:\t" << HNL << '\n';
@@ -50,6 +47,9 @@ using namespace date;
         auto MAO = make_zoned("America/Manaus", floor<seconds>(system_clock::now())); //Using airport codes for cities
         std::cout << "Manaus:\t\t" << MAO << '\n';
 
+        auto SCL = make_zoned("America/Santiago", floor<seconds>(system_clock::now()));
+        std::cout << "Santiago:\t" << SCL << '\n';
+
         auto GRU = make_zoned("America/Sao_Paulo", floor<seconds>(system_clock::now()));
         std::cout << "Sao Paulo:\t" << GRU << '\n';
 
@@ -74,7 +74,6 @@ using namespace date;
         auto ATH = make_zoned("Europe/Athens", floor<seconds>(system_clock::now()));
         std::cout << "Athens:\t\t" << ATH << '\n';
 
-
         auto IST = make_zoned("Europe/Istanbul", floor<seconds>(system_clock::now()));
         std::cout << "Istanbul:\t" << IST << '\n';
 
@@ -95,8 +94,7 @@ using namespace date;
 
         auto PVG = make_zoned("Asia/Shanghai", floor<seconds>(system_clock::now()));
         std::cout << "Shanghai:\t" << PVG << '\n';
-
-      
+              
         auto NRT = make_zoned("Asia/Tokyo", floor<seconds>(system_clock::now()));
         std::cout << "Tokyo:\t\t" << NRT << '\n';
 
@@ -104,7 +102,7 @@ using namespace date;
         std::cout << "Sydney:\t\t" << SYD << '\n';
 
         auto AKL = make_zoned("Pacific/Auckland", floor<seconds>(system_clock::now()));
-        std::cout << "Auckland:\t" << AKL << '\n';
+        std::cout << "Auckland:\t" << AKL;
 
         /*Edited out so that the program will fit on a Windows console without any scrolling
     auto CXI = make_zoned("Pacific/Kiritimati", floor<seconds>(system_clock::now()));
