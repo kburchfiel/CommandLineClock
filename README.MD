@@ -9,3 +9,6 @@ In order to get the program to work:
 3. To run the program, go back into the repository folder, open the Release folder, and then double-click on CWClock.exe (whose type is displayed as "Application."
 
 4. You will likely need to give the program permission to run when launching it for the first time. If you get a message saying "Windows protected your PC," click on "More info" and then select "Run anyway" near the bottom.
+
+
+![Screenshot](https://github.com/kburchfiel/ConsoleWorldClock/blob/master/Screenshot.jpg)
