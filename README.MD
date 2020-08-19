@@ -1,6 +1,6 @@
 ## Important:
 
-In order to get the program to work:
+In order to get the program to run:
 
 1. Download and unzip the entire repository. (Click on the green "Code" button and then select "Download ZIP." Unzip the folder once it has downloaded.)
 
@@ -23,5 +23,9 @@ The console window can be narrowed in order to display times within an even smal
 ![Screenshot](https://github.com/kburchfiel/ConsoleWorldClock/blob/master/Screenshotsmaller.jpg)
 
 To view a list of sources/credits, visit the program's main .cpp file, available at https://github.com/kburchfiel/ConsoleWorldClock/blob/master/CLClockv2.cpp . 
+
+The times on the clock update every minute around ~0 to ~100 milliseconds after the minute on your computer's clock changes. Times are shown in 12-hour format.
+
+
 
 --Kenneth Burchfiel
